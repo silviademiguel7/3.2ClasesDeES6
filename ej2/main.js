@@ -1,43 +1,28 @@
 'use strict';
-
-class Polygon{
-    constructor(numberOfSides, base ,height){
-        this.numberOfSides = numberOfSides;
-        this.base = base;
-        this.height = height;
+class Square {
+    constructor(side){
+        this.side = side;
     }
     
     perimeter(){
-        const perimeter = this.base * this.numberOfSides
-        //console.log(`El perimetro es ${perimeter}`)  
+        const perimeter = this.side * 4
+        console.log(`El perimetro es ${perimeter}`)  
     } 
     area(){
-        const area = this.base * this.height
-        //console.log(`El area es ${area}`)  
+        const area = this.side * this.side;
+        console.log(`El area es ${area}`)  
     }
     
 }
 
+const square1 = new Square(1);
+console.log(square1.perimeter());
+console.log(square1.area());
 
-class Square extends Polygon{
-    constructor(){
-        super(numberOfSides,side);
-        this.numberOfSides = 4;
-        this.side = this.base
-    }
-}
+const square3 = new Square(3);
+console.log(square3.perimeter());
+console.log(square3.area());
 
-
-class Triangle extends Polygon{
-    constructor(base, height){
-        super(base, height);;
-    }
-    area(){
-        super.area() / 2;
-    }
-
-}
-const square = new Square(4);
-const triangle = new Triangle(4,3);
-
-
+const square7 = new Square(7);
+console.log(square7.perimeter());
+console.log(square7.area());
